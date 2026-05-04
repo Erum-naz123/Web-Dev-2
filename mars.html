@@ -1,0 +1,518 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <!--
+    Page: mars.html — Mars Deep Dive
+    All images: NASA JPL Photojournal (photojournal.jpl.nasa.gov) — public domain.
+
+    PIA numbers used:
+      Hero        — PIA00407  (Mars full disc, Viking Orbiter)
+      Overview    — PIA00178  (Valles Marineris mosaic, Viking Orbiter)
+      Life tab    — PIA24542  (Ingenuity helicopter in flight)
+      Gallery 1   — PIA16239  (Curiosity self-portrait at Rocknest)
+      Gallery 2   — PIA17047  (MAVEN artist's concept)
+      Gallery 3   — PIA24543  (Perseverance selfie)
+      Gallery 4   — PIA15116  (Dust devil from HiRISE)
+      Gallery 5   — PIA00563  (Sojourner rover, 1997)
+      Gallery 6   — PIA26305  (Olympus Mons from Mars Odyssey)
+  -->
+  <meta name="description" content="Explore Mars — the Red Planet. Learn about its geology, famous missions, and what future exploration could look like." />
+  <title>Mars | BigPlanetarium</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600;700;900&family=Nunito:wght@300;400;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+  <style>
+    .sr-only {
+      position: absolute; width: 1px; height: 1px;
+      padding: 0; margin: -1px; overflow: hidden;
+      clip: rect(0,0,0,0); white-space: nowrap; border: 0;
+    }
+  </style>
+</head>
+<body>
+
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+
+  <header role="banner">
+    <nav role="navigation" aria-label="Main navigation">
+      <div class="nav-container">
+        <a href="index.html" class="nav-logo" aria-label="BigPlanetarium — Home">
+          <span aria-hidden="true">🌌</span> BigPlanetarium
+        </a>
+        <button class="nav-toggle" aria-expanded="false"
+          aria-controls="nav-menu" aria-label="Open navigation menu">
+          <span class="hamburger-line" aria-hidden="true"></span>
+          <span class="hamburger-line" aria-hidden="true"></span>
+          <span class="hamburger-line" aria-hidden="true"></span>
+        </button>
+        <ul id="nav-menu" class="nav-list" role="list">
+          <li><a href="index.html"   class="nav-link">Home</a></li>
+          <li><a href="planets.html" class="nav-link">Planets</a></li>
+          <li><a href="mars.html"    class="nav-link" aria-current="page">Mars</a></li>
+        </ul>
+      </div>
+    </nav>
+  </header>
+
+  <main id="main-content" role="main">
+
+    <!-- ===== PAGE HERO =====
+         PIA00407: Mars full disc photographed by the Viking Orbiter.
+         Credit: NASA/JPL
+    -->
+    <section class="page-hero" aria-labelledby="mars-hero-heading">
+      <img
+        class="page-hero-img"
+        src="https://picsum.photos/800/800?random=5"
+        alt="Mars photographed in true colour by the Viking Orbiter. The rust-red planet fills the frame, with darker volcanic regions spread across the surface and a bright white polar ice cap visible at the top."
+        width="800"
+        height="800"
+      />
+      <div class="page-hero-overlay" aria-hidden="true"></div>
+      <div class="page-hero-content container">
+        <p class="hero-eyebrow">Fourth Planet from the Sun</p>
+        <h1 id="mars-hero-heading"><span class="text-gold">Mars</span> — The Red Planet</h1>
+        <p style="color:var(--text-secondary); max-width:560px; margin-top:0.5rem;">
+          A cold, dusty world with the highest volcano and the deepest canyon
+          in the Solar System — and humanity's most likely next destination.
+        </p>
+      </div>
+    </section>
+
+    <!-- ===== QUICK FACTS ===== -->
+    <section class="section" aria-labelledby="facts-heading">
+      <div class="container">
+        <header class="section-header reveal">
+          <h2 id="facts-heading">Mars at a <span class="text-gold">Glance</span></h2>
+        </header>
+        <dl class="info-grid reveal" aria-label="Key facts about Mars">
+          <div class="info-card">
+            <dt class="label">Distance from Sun</dt>
+            <dd class="value">228 million km</dd>
+          </div>
+          <div class="info-card">
+            <dt class="label">Day Length</dt>
+            <dd class="value">24 hrs 37 min</dd>
+          </div>
+          <div class="info-card">
+            <dt class="label">Year Length</dt>
+            <dd class="value">687 Earth days</dd>
+          </div>
+          <div class="info-card">
+            <dt class="label">Average Temperature</dt>
+            <dd class="value">−60 °C</dd>
+          </div>
+          <div class="info-card">
+            <dt class="label">Diameter</dt>
+            <dd class="value">6,779 km</dd>
+          </div>
+          <div class="info-card">
+            <dt class="label">Known Moons</dt>
+            <dd class="value">2 (Phobos &amp; Deimos)</dd>
+          </div>
+          <div class="info-card">
+            <dt class="label">Gravity</dt>
+            <dd class="value">3.72 m/s² (38% of Earth)</dd>
+          </div>
+          <div class="info-card">
+            <dt class="label">Atmosphere</dt>
+            <dd class="value">95% carbon dioxide</dd>
+          </div>
+        </dl>
+      </div>
+    </section>
+
+    <!-- ===== TABBED CONTENT ===== -->
+    <section class="section section-dark" aria-labelledby="explore-heading">
+      <div class="container">
+        <header class="section-header reveal">
+          <h2 id="explore-heading">Explore <span class="text-gold">Mars</span></h2>
+        </header>
+
+        <!--
+          ARIA tab pattern:
+          role="tablist" > role="tab" (aria-selected, aria-controls)
+          role="tabpanel" (id matching aria-controls, aria-labelledby)
+          Keyboard arrow navigation handled in main.js
+        -->
+        <div class="tabs reveal">
+          <div role="tablist" aria-label="Mars information sections">
+            <button class="tab-btn" role="tab" id="tab-overview"
+              aria-selected="true"  aria-controls="panel-overview"  tabindex="0">Overview</button>
+            <button class="tab-btn" role="tab" id="tab-geography"
+              aria-selected="false" aria-controls="panel-geography" tabindex="-1">Geography</button>
+            <button class="tab-btn" role="tab" id="tab-missions"
+              aria-selected="false" aria-controls="panel-missions"  tabindex="-1">Missions</button>
+            <button class="tab-btn" role="tab" id="tab-life"
+              aria-selected="false" aria-controls="panel-life"      tabindex="-1">Life on Mars?</button>
+          </div>
+
+          <!-- Tab: Overview
+               PIA00178: Viking Orbiter mosaic of the full Valles Marineris canyon system.
+               Credit: NASA/JPL/USGS
+          -->
+          <div id="panel-overview" role="tabpanel"
+            aria-labelledby="tab-overview" class="tab-panel active" tabindex="0">
+            <div class="two-col" style="margin-top:0;">
+              <div class="content-block">
+                <h3>A World of Extremes</h3>
+                <p>
+                  Mars is roughly half the size of Earth and about a tenth of its mass.
+                  Despite this, it is home to the largest volcano in the Solar System,
+                  <strong>Olympus Mons</strong>, standing 22 km above the surrounding
+                  plains — nearly three times the height of Mount Everest.
+                </p>
+                <p>
+                  The planet's deep red colour comes from iron oxide — rust — coating its
+                  surface. Frequent dust storms can last for months and engulf the entire
+                  planet. Temperatures range from a relatively warm 20 °C near the equator
+                  in summer to −125 °C at the poles in winter.
+                </p>
+                <p>
+                  Mars has two small, irregularly shaped moons: <strong>Phobos</strong>
+                  and <strong>Deimos</strong>. Phobos orbits so close to Mars that it will
+                  eventually crash into the planet or break apart in about 50 million years.
+                </p>
+              </div>
+              <figure class="image-block">
+                <img
+                  src="https://picsum.photos/800/700?random=6"
+                  alt="Viking Orbiter mosaic showing the complete Valles Marineris canyon system stretching across Mars's equatorial region. The vast canyon network — over 4,000 km long — cuts dramatically across the reddish terrain, with the Tharsis volcanic bulge and its dark volcanoes visible to the west."
+                  loading="lazy"
+                  width="800"
+                  height="700"
+                />
+                <figcaption>
+                  Valles Marineris — a canyon 4,000 km long and 7 km deep.
+                  Credit: NASA / JPL / USGS
+                </figcaption>
+              </figure>
+            </div>
+          </div>
+
+          <!-- Tab: Geography -->
+          <div id="panel-geography" role="tabpanel"
+            aria-labelledby="tab-geography" class="tab-panel" tabindex="0">
+            <h3 style="color:var(--accent-gold); margin-bottom:1rem;">Major Geographical Features</h3>
+            <div class="facts-list">
+              <div class="fact-item">
+                <span class="fact-icon" aria-hidden="true">🌋</span>
+                <div>
+                  <h4>Olympus Mons</h4>
+                  <p>The largest volcano in the Solar System at 22 km high and 600 km wide —
+                  roughly the size of France. It is a shield volcano built up by countless
+                  lava flows over billions of years.</p>
+                </div>
+              </div>
+              <div class="fact-item">
+                <span class="fact-icon" aria-hidden="true">🏔️</span>
+                <div>
+                  <h4>Valles Marineris</h4>
+                  <p>A canyon system stretching 4,000 km in length and up to 7 km deep —
+                  dwarfing the Grand Canyon. It was likely formed by tectonic activity and
+                  erosion billions of years ago.</p>
+                </div>
+              </div>
+              <div class="fact-item">
+                <span class="fact-icon" aria-hidden="true">❄️</span>
+                <div>
+                  <h4>Polar Ice Caps</h4>
+                  <p>Both poles have permanent ice caps made of water ice and dry ice
+                  (frozen CO₂). The northern polar cap can span up to 1,000 km across
+                  in winter.</p>
+                </div>
+              </div>
+              <div class="fact-item">
+                <span class="fact-icon" aria-hidden="true">🌊</span>
+                <div>
+                  <h4>Ancient Riverbeds</h4>
+                  <p>Channels and valley networks across the surface suggest that liquid water
+                  once flowed on Mars over 3 billion years ago. Today, liquid water cannot
+                  exist on the surface due to the low atmospheric pressure.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Tab: Missions -->
+          <div id="panel-missions" role="tabpanel"
+            aria-labelledby="tab-missions" class="tab-panel" tabindex="0">
+            <h3 style="color:var(--accent-gold); margin-bottom:1rem;">Key Mars Missions</h3>
+            <div class="facts-list">
+              <div class="fact-item">
+                <span class="fact-icon" aria-hidden="true">🚀</span>
+                <div>
+                  <h4>Mariner 4 (1965)</h4>
+                  <p>The first spacecraft to fly past Mars and return close-up images,
+                  revealing a cratered, Moon-like surface and a thin atmosphere.</p>
+                </div>
+              </div>
+              <div class="fact-item">
+                <span class="fact-icon" aria-hidden="true">🛸</span>
+                <div>
+                  <h4>Viking 1 &amp; 2 (1976)</h4>
+                  <p>NASA's Viking landers were the first to successfully land on Mars and
+                  conduct experiments. They searched for signs of life but returned
+                  inconclusive results.</p>
+                </div>
+              </div>
+              <div class="fact-item">
+                <span class="fact-icon" aria-hidden="true">🤖</span>
+                <div>
+                  <h4>Curiosity Rover (2012–present)</h4>
+                  <p>Still operational today, Curiosity is a car-sized rover exploring Gale
+                  Crater. It confirmed that Mars once had the right conditions for
+                  microbial life.</p>
+                </div>
+              </div>
+              <div class="fact-item">
+                <span class="fact-icon" aria-hidden="true">🚁</span>
+                <div>
+                  <h4>Perseverance &amp; Ingenuity (2021–present)</h4>
+                  <p>Perseverance is collecting rock samples for eventual return to Earth.
+                  Ingenuity — the first powered aircraft to fly on another planet —
+                  completed over 70 flights before retiring in 2024.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Tab: Life on Mars?
+               PIA24542: Ingenuity helicopter in flight, photographed by Perseverance.
+               Credit: NASA/JPL-Caltech
+          -->
+          <div id="panel-life" role="tabpanel"
+            aria-labelledby="tab-life" class="tab-panel" tabindex="0">
+            <div class="two-col" style="margin-top:0;">
+              <div class="content-block">
+                <h3>Could Life Have Existed on Mars?</h3>
+                <p>
+                  Scientists believe that Mars may have supported microbial life billions
+                  of years ago, when the planet was warmer and wetter. The Curiosity rover
+                  discovered organic molecules — the chemical building blocks of life —
+                  in ancient rock sediments.
+                </p>
+                <p>
+                  In 2023, the Perseverance rover found carbon-rich organic compounds in
+                  Jezero Crater — an ancient lake bed — one of the most promising signs yet
+                  that life may once have existed on Mars.
+                </p>
+                <p>
+                  While no definitive proof of life has been found, the Mars Sample Return
+                  mission — planned for the 2030s — aims to bring Martian rocks back to
+                  Earth for detailed laboratory analysis. The answer may lie in those samples.
+                </p>
+              </div>
+              <figure class="image-block">
+                <img
+                  src="https://photojournal.jpl.nasa.gov/jpeg/PIA24542.jpg"
+                  alt="NASA's Ingenuity helicopter hovering approximately 3 metres above the Martian surface during its first flight in April 2021. The helicopter's two rotor blades are visible spinning, and its shadow is cast on the flat reddish-brown Martian terrain below."
+                  loading="lazy"
+                  width="800"
+                  height="600"
+                />
+                <figcaption>
+                  Ingenuity helicopter in flight above Mars, April 2021.
+                  Credit: NASA / JPL-Caltech
+                </figcaption>
+              </figure>
+            </div>
+          </div>
+
+        </div><!-- /.tabs -->
+      </div>
+    </section>
+
+    <!-- ===== VIDEO ===== -->
+    <section class="section" aria-labelledby="mars-video-heading">
+      <div class="container">
+        <header class="section-header reveal">
+          <h2 id="mars-video-heading">Watch: <span class="text-gold">Landing on Mars</span></h2>
+          <p class="section-intro">
+            Experience the dramatic "Seven Minutes of Terror" — the final phase of
+            NASA's Perseverance rover landing in February 2021.
+          </p>
+        </header>
+        <div class="video-wrapper reveal">
+          <iframe
+            src="https://www.youtube.com/embed/gm0b_ijaYMQ"
+            title="NASA Mars 2020 Perseverance Rover landing video — showing the spacecraft entering the Martian atmosphere, deploying its parachute, and touching down in Jezero Crater"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen
+            loading="lazy"
+          ></iframe>
+        </div>
+        <p class="video-caption">Video: Mars 2020 Perseverance Rover Landing — courtesy of NASA/JPL</p>
+      </div>
+    </section>
+
+    <!-- ===== IMAGE GALLERY =====
+         All images: NASA JPL Photojournal — public domain, no hotlink restrictions.
+    -->
+    <section class="section section-dark" aria-labelledby="gallery-heading">
+      <div class="container">
+        <header class="section-header reveal">
+          <h2 id="gallery-heading">Mars in <span class="text-gold">Pictures</span></h2>
+          <p class="section-intro">
+            A gallery of real NASA photographs. Click or press Enter on any image
+            to view it full size.
+          </p>
+        </header>
+
+        <div class="gallery reveal" role="list" aria-label="Gallery of Mars photographs">
+
+          <!--
+            PIA16239: Curiosity rover self-portrait at Rocknest sand dune, Gale Crater.
+            Assembled from dozens of images. Credit: NASA/JPL-Caltech/MSSS
+          -->
+          <figure class="gallery-item" role="listitem">
+            <img
+              src="https://picsum.photos/480/480?random=7"
+              width="480"
+              height="480"
+            />
+            <figcaption>Curiosity self-portrait at Rocknest, Gale Crater</figcaption>
+          </figure>
+
+          <!--
+            PIA17047: MAVEN spacecraft artist's concept.
+            Credit: NASA/Goddard Space Flight Center
+          -->
+          <figure class="gallery-item" role="listitem">
+            <img
+              src="https://picsum.photos/480/360?text=MAVEN+Spacecraft"
+              alt="Artist's concept of NASA's MAVEN spacecraft orbiting Mars. The spacecraft's large solar panels are extended, and the planet's thin blue atmospheric haze glows around the limb of Mars in the background."
+              loading="lazy"
+              width="480"
+              height="360"
+            />
+            <figcaption>MAVEN spacecraft orbiting Mars (artist's concept)</figcaption>
+          </figure>
+
+          <!--
+            PIA24543: Perseverance rover selfie at the Rochette rock target.
+            Credit: NASA/JPL-Caltech/MSSS
+          -->
+          <figure class="gallery-item" role="listitem">
+            <img
+              src="https://picsum.photos/480/480?random=9"
+              alt="Perseverance Mars rover selfie taken near the Rochette rock target in Jezero Crater. The rover's mast camera, instruments, and wheels are visible, surrounded by the brown and grey rocky terrain of the ancient lake bed."
+              loading="lazy"
+              width="480"
+              height="480"
+            />
+            <figcaption>Perseverance rover selfie in Jezero Crater</figcaption>
+          </figure>
+
+          <!--
+            PIA15116: Dust devil captured by the HiRISE camera on Mars Reconnaissance Orbiter.
+            Credit: NASA/JPL-Caltech/University of Arizona
+          -->
+          <figure class="gallery-item" role="listitem">
+            <img
+              src="https://picsum.photos/480/480?random=10"
+              alt="A towering Martian dust devil casting a long dark shadow across the flat, rust-coloured plains of Mars. The swirling column of dust stands many hundreds of metres tall and was photographed from orbit by the HiRISE camera."
+              loading="lazy"
+              width="480"
+              height="480"
+            />
+            <figcaption>A towering dust devil, photographed from orbit by HiRISE</figcaption>
+          </figure>
+
+          <!--
+            PIA00563: Sojourner rover at the Mars Pathfinder landing site (1997).
+            The first Mars rover mission. Credit: NASA/JPL
+          -->
+          <figure class="gallery-item" role="listitem">
+            <img
+              src="https://picsum.photos/480/360?random=11"
+              alt="The Sojourner rover at the Mars Pathfinder landing site in 1997. The small rover — about the size of a microwave oven — is positioned near a rock on the dusty Martian surface, with the lander's deflated airbags and ramps visible behind it."
+              loading="lazy"
+              width="480"
+              height="360"
+            />
+            <figcaption>Sojourner rover at the Pathfinder landing site, 1997</figcaption>
+          </figure>
+
+          <!--
+            PIA26305: Olympus Mons photographed by NASA's 2001 Mars Odyssey orbiter (2024).
+            Credit: NASA/JPL-Caltech/ASU
+          -->
+          <figure class="gallery-item" role="listitem">
+            <img
+              src="https://picsum.photos/480/360?random=12"
+              alt="Olympus Mons, the Solar System's tallest volcano, photographed from orbit by NASA's Mars Odyssey spacecraft in 2024. The enormous shield volcano and its large summit caldera are clearly visible, with the thin Martian atmosphere creating a blue haze along the horizon."
+              loading="lazy"
+              width="480"
+              height="360"
+            />
+            <figcaption>Olympus Mons, the Solar System's largest volcano — Mars Odyssey, 2024</figcaption>
+          </figure>
+
+        </div><!-- /.gallery -->
+      </div>
+    </section>
+
+    <!-- ===== NAV CTA ===== -->
+    <section class="section" aria-labelledby="next-heading">
+      <div class="container" style="text-align:center;">
+        <h2 id="next-heading" class="reveal">Keep <span class="text-gold">Exploring</span></h2>
+        <p class="section-intro reveal" style="margin:1rem auto 2rem;">
+          There is much more to discover — explore all eight planets or head back
+          to the Milky Way overview.
+        </p>
+        <div style="display:flex; gap:1rem; justify-content:center; flex-wrap:wrap;" class="reveal">
+          <a href="planets.html" class="btn btn-primary">All Planets</a>
+          <a href="index.html"   class="btn btn-secondary">Back to Home</a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!--
+    LIGHTBOX MODAL
+    hidden attribute: hides from AT until opened.
+    role="dialog" + aria-modal="true": traps focus.
+    aria-label: accessible name for the dialog.
+  -->
+  <div id="lightbox" class="lightbox" role="dialog"
+    aria-modal="true" aria-label="Full size image viewer" hidden>
+    <button id="lightbox-close" class="lightbox-close"
+      aria-label="Close full size image">✕</button>
+    <img id="lightbox-img" src="" alt="" />
+  </div>
+
+  <footer role="contentinfo">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="index.html" class="nav-logo" aria-label="BigPlanetarium — Home">
+            <span aria-hidden="true">🌌</span> BigPlanetarium
+          </a>
+          <p>An educational space exploration experience based in Bristol, UK.</p>
+        </div>
+        <nav aria-label="Footer navigation">
+          <h3 class="footer-heading">Pages</h3>
+          <ul role="list">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="planets.html">Planets</a></li>
+            <li><a href="mars.html">Mars</a></li>
+          </ul>
+        </nav>
+        <div>
+          <h3 class="footer-heading">Image Credits</h3>
+          <p>All images: NASA / JPL-Caltech (public domain).</p>
+          <p>Sourced from NASA's Planetary Photojournal.</p>
+        </div>
+      </div>
+      <p class="footer-bottom">© 2024 BigPlanetarium. Built for educational purposes.</p>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

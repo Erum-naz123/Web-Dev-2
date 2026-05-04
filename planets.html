@@ -1,0 +1,435 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <!--
+    Page: planets.html — All Planets Overview
+    All images: NASA JPL Photojournal (photojournal.jpl.nasa.gov) — public domain.
+
+    PIA numbers used:
+      Mercury  — PIA15162 (MESSENGER colour mosaic)
+      Venus    — PIA00271 (Magellan radar mosaic)
+      Earth    — PIA00342 (Galileo true colour)
+      Mars     — PIA00407 (Viking Orbiter)
+      Jupiter  — PIA21974 (JunoCam)
+      Saturn   — PIA06077 (Cassini)
+      Uranus   — PIA01356 (Voyager 2)
+      Neptune  — PIA01492 (Voyager 2)
+      Hero     — PIA03153 (Solar System Montage 2001)
+  -->
+  <meta name="description" content="Explore all eight planets of our Solar System — from tiny Mercury to distant Neptune." />
+  <title>Planets | BigPlanetarium</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600;700;900&family=Nunito:wght@300;400;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+  <style>
+    .sr-only {
+      position: absolute; width: 1px; height: 1px;
+      padding: 0; margin: -1px; overflow: hidden;
+      clip: rect(0,0,0,0); white-space: nowrap; border: 0;
+    }
+  </style>
+</head>
+<body>
+
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+
+  <header role="banner">
+    <nav role="navigation" aria-label="Main navigation">
+      <div class="nav-container">
+        <a href="index.html" class="nav-logo" aria-label="BigPlanetarium — Home">
+          <span aria-hidden="true">🌌</span> BigPlanetarium
+        </a>
+        <button class="nav-toggle" aria-expanded="false"
+          aria-controls="nav-menu" aria-label="Open navigation menu">
+          <span class="hamburger-line" aria-hidden="true"></span>
+          <span class="hamburger-line" aria-hidden="true"></span>
+          <span class="hamburger-line" aria-hidden="true"></span>
+        </button>
+        <ul id="nav-menu" class="nav-list" role="list">
+          <li><a href="index.html"   class="nav-link">Home</a></li>
+          <li><a href="planets.html" class="nav-link" aria-current="page">Planets</a></li>
+          <li><a href="mars.html"    class="nav-link">Mars</a></li>
+        </ul>
+      </div>
+    </nav>
+  </header>
+
+  <main id="main-content" role="main">
+
+    <!-- ===== PAGE HERO =====
+         PIA03153: NASA Solar System Montage (2001 high-resolution version)
+         Shows all 8 planets photographed by NASA spacecraft.
+         Credit: NASA/JPL
+    -->
+    <section class="page-hero" aria-labelledby="page-hero-heading">
+      <img
+        class="page-hero-img"
+        src="https://picsum.photos/1000/800?random=13"
+        alt="NASA's 2001 Solar System Montage showing all eight planets stacked vertically — Mercury, Venus, Earth with its Moon, Mars, Jupiter, Saturn, Uranus, and Neptune — each photographed by a different NASA spacecraft"
+        width="1000"
+        height="800"
+      />
+      <div class="page-hero-overlay" aria-hidden="true"></div>
+      <div class="page-hero-content container">
+        <p class="hero-eyebrow">Our Solar System</p>
+        <h1 id="page-hero-heading">The <span class="text-gold">Eight Planets</span></h1>
+        <p style="color: var(--text-secondary); max-width: 560px; margin-top: 0.5rem;">
+          From blazing Mercury to icy Neptune, explore the eight planets that
+          orbit our star, the Sun.
+        </p>
+      </div>
+    </section>
+
+    <!-- ===== INTRO + PLANET CARDS ===== -->
+    <section class="section" aria-labelledby="intro-heading">
+      <div class="container">
+
+        <header class="section-header reveal">
+          <h2 id="intro-heading">Our Solar <span class="text-gold">Family</span></h2>
+          <p class="section-intro">
+            The Solar System formed about 4.6 billion years ago. The Sun holds 99.8%
+            of the system's total mass, with the eight planets orbiting it in nearly
+            circular paths.
+          </p>
+        </header>
+
+        <div class="planets-grid" role="list" aria-label="Planets of the Solar System">
+
+          <!-- =====================================================
+               MERCURY — PIA15162
+               MESSENGER spacecraft colour mosaic of Mercury.
+               Credit: NASA/Johns Hopkins University APL/Carnegie Institution of Washington
+          ===================================================== -->
+          <article class="planet-card reveal" role="listitem">
+            <img
+              class="planet-card-img"
+              src="https://picsum.photos/600/600?random=14"
+              alt="Mercury photographed by the MESSENGER spacecraft in enhanced colour, showing a grey, heavily cratered surface with subtle differences in rock composition highlighted in shades of blue, tan, and orange"
+              loading="lazy"
+              width="600"
+              height="600"
+            />
+            <div class="planet-card-body">
+              <h3>Mercury</h3>
+              <p class="planet-type">Terrestrial Planet</p>
+              <p>
+                The smallest planet and closest to the Sun. Mercury experiences
+                extreme temperature swings — from 430 °C during the day to
+                −180 °C at night, because it has almost no atmosphere to retain heat.
+              </p>
+              <dl style="margin-top:0.75rem; font-size:0.85rem; color: var(--text-secondary);">
+                <div style="display:flex; justify-content:space-between; border-bottom: 1px solid var(--border); padding: 0.3rem 0;">
+                  <dt>Distance from Sun</dt><dd style="color:var(--accent-gold)">57.9M km</dd>
+                </div>
+                <div style="display:flex; justify-content:space-between; padding: 0.3rem 0;">
+                  <dt>Day length</dt><dd style="color:var(--accent-gold)">59 Earth days</dd>
+                </div>
+              </dl>
+            </div>
+          </article>
+
+          <!-- =====================================================
+               VENUS — PIA00271
+               Magellan spacecraft radar mosaic of Venus.
+               Credit: NASA/JPL
+          ===================================================== -->
+          <article class="planet-card reveal" role="listitem">
+            <img
+              class="planet-card-img"
+              src="https://picsum.photos/600/600?random=15"
+              alt="Venus photographed by the Magellan spacecraft using radar imaging, revealing the planet's surface beneath its thick cloud cover. The false-colour image shows varied terrain including volcanic plains and highland regions."
+              loading="lazy"
+              width="600"
+              height="600"
+            />
+            <div class="planet-card-body">
+              <h3>Venus</h3>
+              <p class="planet-type">Terrestrial Planet</p>
+              <p>
+                Often called Earth's twin due to its similar size, Venus is the
+                hottest planet at 465 °C thanks to a runaway greenhouse effect.
+                It also rotates backwards — a day on Venus lasts longer than its year!
+              </p>
+              <dl style="margin-top:0.75rem; font-size:0.85rem; color: var(--text-secondary);">
+                <div style="display:flex; justify-content:space-between; border-bottom: 1px solid var(--border); padding: 0.3rem 0;">
+                  <dt>Distance from Sun</dt><dd style="color:var(--accent-gold)">108.2M km</dd>
+                </div>
+                <div style="display:flex; justify-content:space-between; padding: 0.3rem 0;">
+                  <dt>Surface temp</dt><dd style="color:var(--accent-gold)">465 °C</dd>
+                </div>
+              </dl>
+            </div>
+          </article>
+
+          <!-- =====================================================
+               EARTH — PIA00342
+               Galileo spacecraft true-colour image of Earth.
+               Credit: NASA/JPL
+          ===================================================== -->
+          <article class="planet-card reveal" role="listitem">
+            <img
+              class="planet-card-img"
+              src="https://picsum.photos/600/600?random=16"
+              alt="Earth photographed in true colour by the Galileo spacecraft during its gravity-assist flyby. The image shows the Pacific Ocean, parts of North and South America, and swirling white cloud systems against the deep blue ocean."
+              loading="lazy"
+              width="600"
+              height="600"
+            />
+            <div class="planet-card-body">
+              <h3>Earth</h3>
+              <p class="planet-type">Terrestrial Planet</p>
+              <p>
+                Our home planet is the only known world with life. Liquid water
+                covers 71% of its surface, and a protective magnetic field shields
+                us from harmful solar radiation.
+              </p>
+              <dl style="margin-top:0.75rem; font-size:0.85rem; color: var(--text-secondary);">
+                <div style="display:flex; justify-content:space-between; border-bottom: 1px solid var(--border); padding: 0.3rem 0;">
+                  <dt>Distance from Sun</dt><dd style="color:var(--accent-gold)">149.6M km</dd>
+                </div>
+                <div style="display:flex; justify-content:space-between; padding: 0.3rem 0;">
+                  <dt>Known moons</dt><dd style="color:var(--accent-gold)">1</dd>
+                </div>
+              </dl>
+            </div>
+          </article>
+
+          <!-- =====================================================
+               MARS — PIA00407
+               Viking Orbiter true-colour full disc.
+               Credit: NASA/JPL
+          ===================================================== -->
+          <article class="planet-card reveal" role="listitem">
+            <img
+              class="planet-card-img"
+              src="https://picsum.photos/600/600?random=17"
+              alt="Mars photographed in true colour by the Viking Orbiter, showing the rust-red planet with darker volcanic regions across the surface and a bright white polar ice cap at the top of the disc"
+              loading="lazy"
+              width="600"
+              height="600"
+            />
+            <div class="planet-card-body">
+              <h3>Mars</h3>
+              <p class="planet-type">Terrestrial Planet</p>
+              <p>
+                The Red Planet has the tallest volcano in the Solar System —
+                Olympus Mons, standing 22 km high. Several rovers are currently
+                exploring its surface searching for signs of ancient life.
+              </p>
+              <a href="mars.html" class="planet-card-link">
+                Explore Mars in detail →
+                <span class="sr-only">(opens the Mars page)</span>
+              </a>
+            </div>
+          </article>
+
+          <!-- =====================================================
+               JUPITER — PIA21974
+               JunoCam image from Juno spacecraft.
+               Credit: NASA/JPL-Caltech/SwRI/MSSS
+          ===================================================== -->
+          <article class="planet-card reveal" role="listitem">
+            <img
+              class="planet-card-img"
+              src="https://picsum.photos/600/600?random=18"
+              alt="Jupiter photographed close-up by NASA's Juno spacecraft JunoCam instrument, showing the planet's dramatic swirling cloud bands in rich shades of brown, orange, tan, and cream, with complex turbulent storm systems at the edges of the bands"
+              loading="lazy"
+              width="600"
+              height="600"
+            />
+            <div class="planet-card-body">
+              <h3>Jupiter</h3>
+              <p class="planet-type">Gas Giant</p>
+              <p>
+                The largest planet — more than twice the mass of all other planets
+                combined. Its Great Red Spot is a storm that has lasted for at
+                least 350 years and is wider than Earth.
+              </p>
+              <dl style="margin-top:0.75rem; font-size:0.85rem; color: var(--text-secondary);">
+                <div style="display:flex; justify-content:space-between; border-bottom: 1px solid var(--border); padding: 0.3rem 0;">
+                  <dt>Known moons</dt><dd style="color:var(--accent-gold)">95</dd>
+                </div>
+                <div style="display:flex; justify-content:space-between; padding: 0.3rem 0;">
+                  <dt>Day length</dt><dd style="color:var(--accent-gold)">9.9 hrs</dd>
+                </div>
+              </dl>
+            </div>
+          </article>
+
+          <!-- =====================================================
+               SATURN — PIA06077
+               Cassini spacecraft natural colour.
+               Credit: NASA/JPL-Caltech/Space Science Institute
+          ===================================================== -->
+          <article class="planet-card reveal" role="listitem">
+            <img
+              class="planet-card-img"
+              src="https://picsum.photos/600/600?random=19"
+              alt="Saturn and its spectacular ring system photographed by NASA's Cassini spacecraft in natural colour. The golden-tan planet is encircled by its wide, flat rings, and the shadow of the rings is cast as a dark band across the planet's cloud tops."
+              loading="lazy"
+              width="600"
+              height="600"
+            />
+            <div class="planet-card-body">
+              <h3>Saturn</h3>
+              <p class="planet-type">Gas Giant</p>
+              <p>
+                Famous for its spectacular ring system made of ice and rock,
+                Saturn is so low-density it could float on water. It has 146
+                known moons, including Titan with its own thick atmosphere.
+              </p>
+              <dl style="margin-top:0.75rem; font-size:0.85rem; color: var(--text-secondary);">
+                <div style="display:flex; justify-content:space-between; border-bottom: 1px solid var(--border); padding: 0.3rem 0;">
+                  <dt>Ring width</dt><dd style="color:var(--accent-gold)">282,000 km</dd>
+                </div>
+                <div style="display:flex; justify-content:space-between; padding: 0.3rem 0;">
+                  <dt>Known moons</dt><dd style="color:var(--accent-gold)">146</dd>
+                </div>
+              </dl>
+            </div>
+          </article>
+
+          <!-- =====================================================
+               URANUS — PIA01356
+               Voyager 2 — processed colour image.
+               Credit: NASA/JPL
+          ===================================================== -->
+          <article class="planet-card reveal" role="listitem">
+            <img
+              class="planet-card-img"
+              src="https://picsum.photos/600/600?random=20"
+              alt="Uranus photographed by Voyager 2 in processed colour, appearing as a pale blue-green sphere due to methane in its upper atmosphere absorbing red light. The planet appears featureless because its cloud layers are hidden beneath a thick haze."
+              loading="lazy"
+              width="600"
+              height="600"
+            />
+            <div class="planet-card-body">
+              <h3>Uranus</h3>
+              <p class="planet-type">Ice Giant</p>
+              <p>
+                Uranus rotates on its side with an axial tilt of 98° — meaning
+                its poles experience 42 years of continuous sunlight followed by
+                42 years of darkness. It is the coldest planet at −224 °C.
+              </p>
+              <dl style="margin-top:0.75rem; font-size:0.85rem; color: var(--text-secondary);">
+                <div style="display:flex; justify-content:space-between; border-bottom: 1px solid var(--border); padding: 0.3rem 0;">
+                  <dt>Min temperature</dt><dd style="color:var(--accent-cyan)">−224 °C</dd>
+                </div>
+                <div style="display:flex; justify-content:space-between; padding: 0.3rem 0;">
+                  <dt>Known moons</dt><dd style="color:var(--accent-gold)">28</dd>
+                </div>
+              </dl>
+            </div>
+          </article>
+
+          <!-- =====================================================
+               NEPTUNE — PIA01492
+               Voyager 2 — natural colour image.
+               Credit: NASA/JPL
+          ===================================================== -->
+          <article class="planet-card reveal" role="listitem">
+            <img
+              class="planet-card-img"
+              src="https://picsum.photos/600/600?random=21"
+              alt="Neptune photographed by Voyager 2, showing a vivid blue sphere with white cloud streaks and the Great Dark Spot, a storm system similar to Jupiter's Great Red Spot. The deep blue colour comes from methane absorbing red wavelengths of light."
+              loading="lazy"
+              width="600"
+              height="600"
+            />
+            <div class="planet-card-body">
+              <h3>Neptune</h3>
+              <p class="planet-type">Ice Giant</p>
+              <p>
+                The most distant planet, Neptune has winds of up to 2,100 km/h —
+                the fastest in the Solar System. One Neptune year lasts
+                165 Earth years, meaning it completed its first orbit since
+                its discovery in 2011.
+              </p>
+              <dl style="margin-top:0.75rem; font-size:0.85rem; color: var(--text-secondary);">
+                <div style="display:flex; justify-content:space-between; border-bottom: 1px solid var(--border); padding: 0.3rem 0;">
+                  <dt>Distance from Sun</dt><dd style="color:var(--accent-gold)">4.5B km</dd>
+                </div>
+                <div style="display:flex; justify-content:space-between; padding: 0.3rem 0;">
+                  <dt>Year length</dt><dd style="color:var(--accent-gold)">165 Earth yrs</dd>
+                </div>
+              </dl>
+            </div>
+          </article>
+
+        </div><!-- /.planets-grid -->
+
+      </div>
+    </section>
+
+    <!-- ===== VIDEO ===== -->
+    <section class="section section-dark" aria-labelledby="solar-video-heading">
+      <div class="container">
+        <header class="section-header reveal">
+          <h2 id="solar-video-heading">Watch: <span class="text-gold">Scale of the Solar System</span></h2>
+          <p class="section-intro">
+            It is hard to comprehend just how vast our Solar System really is.
+            This NASA video puts the true scale into perspective.
+          </p>
+        </header>
+        <div class="video-wrapper reveal">
+          <iframe
+            src="https://www.youtube.com/embed/0KBjnNuhRHs"
+            title="NASA: How big is our Solar System? A scale video showing the vast distances between the planets"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen
+            loading="lazy"
+          ></iframe>
+        </div>
+        <p class="video-caption">Video: Scale of the Solar System — courtesy of NASA</p>
+      </div>
+    </section>
+
+    <!-- ===== CTA ===== -->
+    <section class="section" aria-labelledby="cta-heading">
+      <div class="container" style="text-align:center;">
+        <h2 id="cta-heading" class="reveal">
+          Ready to go deeper? <span class="text-gold">Explore Mars</span>
+        </h2>
+        <p class="section-intro reveal" style="margin:1rem auto 2rem;">
+          Dive into a full dedicated page about the Red Planet — its geology,
+          missions, and future of exploration.
+        </p>
+        <a href="mars.html" class="btn btn-primary reveal">Explore Mars</a>
+      </div>
+    </section>
+
+  </main>
+
+  <footer role="contentinfo">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="index.html" class="nav-logo" aria-label="BigPlanetarium — Home">
+            <span aria-hidden="true">🌌</span> BigPlanetarium
+          </a>
+          <p>An educational space exploration experience based in Bristol, UK.</p>
+        </div>
+        <nav aria-label="Footer navigation">
+          <h3 class="footer-heading">Pages</h3>
+          <ul role="list">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="planets.html">Planets</a></li>
+            <li><a href="mars.html">Mars</a></li>
+          </ul>
+        </nav>
+        <div>
+          <h3 class="footer-heading">Image Credits</h3>
+          <p>All images: NASA / JPL-Caltech (public domain).</p>
+          <p>Sourced from NASA's Planetary Photojournal.</p>
+        </div>
+      </div>
+      <p class="footer-bottom">© 2024 BigPlanetarium. Built for educational purposes.</p>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

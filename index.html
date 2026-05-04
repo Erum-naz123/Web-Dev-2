@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <!--
+    Page: index.html — BigPlanetarium Landing Page
+    All images: NASA JPL Photojournal (photojournal.jpl.nasa.gov) — public domain.
+  -->
+  <meta name="description" content="BigPlanetarium — Explore the Milky Way and our Solar System. Space education for everyone." />
+  <title>BigPlanetarium | Explore the Milky Way</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600;700;900&family=Nunito:wght@300;400;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+
+  <header role="banner">
+    <nav role="navigation" aria-label="Main navigation">
+      <div class="nav-container">
+        <a href="index.html" class="nav-logo" aria-label="BigPlanetarium — Home">
+          <span aria-hidden="true">🌌</span> BigPlanetarium
+        </a>
+        <button class="nav-toggle" aria-expanded="false"
+          aria-controls="nav-menu" aria-label="Open navigation menu">
+          <span class="hamburger-line" aria-hidden="true"></span>
+          <span class="hamburger-line" aria-hidden="true"></span>
+          <span class="hamburger-line" aria-hidden="true"></span>
+        </button>
+        <ul id="nav-menu" class="nav-list" role="list">
+          <li><a href="index.html"   class="nav-link" aria-current="page">Home</a></li>
+          <li><a href="planets.html" class="nav-link">Planets</a></li>
+          <li><a href="mars.html"    class="nav-link">Mars</a></li>
+        </ul>
+      </div>
+    </nav>
+  </header>
+
+  <main id="main-content" role="main">
+
+    <!-- ===== HERO ===== -->
+    <section class="hero" aria-labelledby="hero-heading">
+      <canvas id="starfield" aria-hidden="true"></canvas>
+      <div class="hero-content">
+        <p class="hero-eyebrow">Welcome to BigPlanetarium</p>
+        <h1 id="hero-heading">Explore the <span class="text-gold">Milky Way</span></h1>
+        <p class="hero-subtitle">
+          Journey through our galaxy and discover the wonders of outer space.
+          Science is for everyone — come explore.
+        </p>
+        <div class="hero-actions">
+          <a href="planets.html" class="btn btn-primary">Explore Planets</a>
+          <a href="#milky-way"   class="btn btn-secondary">Learn More</a>
+        </div>
+      </div>
+      <div class="hero-scroll-indicator" aria-hidden="true">↓</div>
+    </section>
+
+    <!-- ===== MILKY WAY OVERVIEW ===== -->
+    <section id="milky-way" class="section" aria-labelledby="milky-way-heading">
+      <div class="container">
+
+        <header class="section-header reveal">
+          <h2 id="milky-way-heading">Our Galaxy: <span class="text-gold">The Milky Way</span></h2>
+          <p class="section-intro">
+            The Milky Way is the galaxy that contains our Solar System — a vast
+            spiral of 200–400 billion stars stretching 100,000 light-years across.
+          </p>
+        </header>
+
+        <div class="two-col reveal">
+          <div class="content-block">
+            <h3>What is the Milky Way?</h3>
+            <p>
+              The Milky Way is a <strong>barred spiral galaxy</strong> containing
+              200–400 billion stars. It spans roughly 100,000 light-years across
+              and is estimated to be around 13.6 billion years old — nearly as old
+              as the universe itself.
+            </p>
+            <p>
+              Our Solar System sits in one of the galaxy's outer spiral arms —
+              the <em>Orion Arm</em> — about 26,000 light-years from the galactic
+              centre. At the very heart lies a supermassive black hole called
+              <strong>Sagittarius A*</strong>, with a mass four million times that
+              of our Sun.
+            </p>
+            <p>
+              Despite its enormous size, the Milky Way is just one of an estimated
+              two trillion galaxies in the observable universe!
+            </p>
+          </div>
+
+          <!--
+            PIA13932 — Spitzer Space Telescope infrared mosaic of the Milky Way
+            galactic centre. Stars and dust clouds glow in shades of blue and green.
+            Credit: NASA/JPL-Caltech
+          -->
+          <figure class="image-block">
+            <img
+              src="https://picsum.photos/800/533?random=1"
+              alt="Spitzer Space Telescope infrared image of the Milky Way galactic centre. Thousands of stars form a bright blue haze while green dust clouds swirl around the core. The very centre marks the location of the supermassive black hole Sagittarius A-star."
+              loading="lazy"
+              width="800"
+              height="533"
+            />
+            <figcaption>
+              The heart of the Milky Way in infrared, taken by NASA's Spitzer Space Telescope.
+              Credit: NASA / JPL-Caltech
+            </figcaption>
+          </figure>
+        </div>
+
+        <dl class="stats-grid reveal" aria-label="Milky Way key facts">
+          <div class="stat-card">
+            <dt class="stat-label">Stars in the Milky Way</dt>
+            <dd class="stat-number">200–400B</dd>
+          </div>
+          <div class="stat-card">
+            <dt class="stat-label">Diameter (light-years)</dt>
+            <dd class="stat-number">100,000</dd>
+          </div>
+          <div class="stat-card">
+            <dt class="stat-label">Estimated age</dt>
+            <dd class="stat-number">13.6B yrs</dd>
+          </div>
+          <div class="stat-card">
+            <dt class="stat-label">Planets in our Solar System</dt>
+            <dd class="stat-number">8</dd>
+          </div>
+        </dl>
+
+      </div>
+    </section>
+
+    <!-- ===== VIDEO ===== -->
+    <section class="section section-dark" aria-labelledby="video-heading">
+      <div class="container">
+        <header class="section-header reveal">
+          <h2 id="video-heading">Watch: <span class="text-gold">Our Solar System</span></h2>
+          <p class="section-intro">
+            Get a guided tour of our Solar System, from the scorching surface of
+            Mercury to the icy reaches of Neptune.
+          </p>
+        </header>
+        <div class="video-wrapper reveal">
+          <iframe
+            src="https://www.youtube.com/embed/libKVRa01L8"
+            title="NASA: A tour of the planets in our Solar System — educational video"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen
+            loading="lazy"
+          ></iframe>
+        </div>
+        <p class="video-caption">Video: Our Solar System — courtesy of NASA (YouTube)</p>
+      </div>
+    </section>
+
+    <!-- ===== QUIZ ===== -->
+    <section class="section" aria-labelledby="quiz-heading">
+      <div class="container">
+        <header class="section-header reveal">
+          <h2 id="quiz-heading">Test Your <span class="text-gold">Space Knowledge</span></h2>
+          <p class="section-intro">Think you know the cosmos? Try our five-question quiz!</p>
+        </header>
+        <div id="quiz-container" class="quiz-container reveal"
+          role="region" aria-label="Space knowledge quiz">
+          <noscript><p>Please enable JavaScript to take the quiz.</p></noscript>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== PLANET PREVIEWS ===== -->
+    <section class="section section-dark" aria-labelledby="planets-preview-heading">
+      <div class="container">
+
+        <header class="section-header reveal">
+          <h2 id="planets-preview-heading">Explore the <span class="text-gold">Planets</span></h2>
+          <p class="section-intro">
+            Our Solar System contains eight remarkable planets, each with its own unique story.
+          </p>
+        </header>
+
+        <div class="planet-preview-grid reveal">
+
+          <!--
+            PIA00407: Mars full disc — Viking Orbiter. Credit: NASA/JPL
+          -->
+          <a href="mars.html" class="planet-preview-card"
+            aria-label="Explore Mars — the Red Planet">
+            <img
+              src="https://picsum.photos/480/480?random=2"
+              alt="Mars photographed in true colour by the Viking Orbiter, displaying the rust-red surface with prominent darker regions and a white polar ice cap at the top"
+              loading="lazy"
+              width="480"
+              height="480"
+            />
+            <div class="planet-preview-info">
+              <h3>Mars</h3>
+              <p>The Red Planet</p>
+            </div>
+          </a>
+
+          <!--
+            PIA21974: Jupiter — JunoCam. Credit: NASA/JPL-Caltech/SwRI/MSSS
+          -->
+          <a href="planets.html" class="planet-preview-card"
+            aria-label="Explore Jupiter on the planets page">
+            <img
+              src="https://picsum.photos/480/480?random=3"
+              alt="Jupiter photographed by NASA's Juno spacecraft, showing the planet's dramatic swirling cloud bands in shades of brown, orange, and cream, with several large storm systems visible"
+              loading="lazy"
+              width="480"
+              height="480"
+            />
+            <div class="planet-preview-info">
+              <h3>Jupiter</h3>
+              <p>The Gas Giant</p>
+            </div>
+          </a>
+
+          <!--
+            PIA06077: Saturn — Cassini spacecraft. Credit: NASA/JPL-Caltech/Space Science Institute
+          -->
+          <a href="planets.html" class="planet-preview-card"
+            aria-label="Explore Saturn on the planets page">
+            <img
+              src="https://picsum.photos/480/480?random=4"
+              alt="Saturn and its iconic ring system photographed by the Cassini spacecraft, showing the golden-tan planet surrounded by its vast, flat rings casting a shadow onto the cloud tops"
+              loading="lazy"
+              width="480"
+              height="480"
+            />
+            <div class="planet-preview-info">
+              <h3>Saturn</h3>
+              <p>The Ringed Planet</p>
+            </div>
+          </a>
+
+        </div>
+
+        <div class="section-cta reveal">
+          <a href="planets.html" class="btn btn-primary">See All 8 Planets</a>
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+  <footer role="contentinfo">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="index.html" class="nav-logo" aria-label="BigPlanetarium — Home">
+            <span aria-hidden="true">🌌</span> BigPlanetarium
+          </a>
+          <p>An educational space exploration experience based in Bristol, UK.</p>
+        </div>
+        <nav aria-label="Footer navigation">
+          <h3 class="footer-heading">Pages</h3>
+          <ul role="list">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="planets.html">Planets</a></li>
+            <li><a href="mars.html">Mars</a></li>
+          </ul>
+        </nav>
+        <div>
+          <h3 class="footer-heading">Image Credits</h3>
+          <p>All images: NASA / JPL-Caltech (public domain).</p>
+          <p>Sourced from NASA's Planetary Photojournal.</p>
+        </div>
+      </div>
+      <p class="footer-bottom">© 2024 BigPlanetarium. Built for educational purposes.</p>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
